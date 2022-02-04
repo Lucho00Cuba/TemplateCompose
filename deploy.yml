@@ -1,0 +1,16 @@
+version: '2'
+services:
+  nginx:
+    image: nginx:alpine
+    environment:
+      ENV: prod
+      USER: admin
+      PASS: admin
+    ports:
+       - 2200:3300
+  nginx-1:
+    image: nginx-1:alpine
+    environment:
+      ENV: test
+      USER: root
+      PASS: root

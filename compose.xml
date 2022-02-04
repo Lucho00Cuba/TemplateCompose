@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stack name="KPMW">
+    <svc type="service">
+        <name>nginx</name>
+        <image>nginx:alpine</image>
+        <environment>
+            <vars>
+                <name>ENV</name>
+                <value>prod</value>
+            </vars>
+            <vars>
+                <name>USER</name>
+                <value>admin</value>
+            </vars>
+            <vars>
+                <name>PASS</name>
+                <value>admin</value>
+            </vars>
+        </environment>
+        <ports>
+            <port>
+                <num>2200:3300</num>
+            </port>
+        </ports>
+    </svc>
+    <svc type="service">
+        <name>nginx-1</name>
+        <image>nginx-1:alpine</image>
+        <environment>
+            <vars>
+                <name>ENV</name>
+                <value>test</value>
+            </vars>
+            <vars>
+                <name>USER</name>
+                <value>root</value>
+            </vars>
+            <vars>
+                <name>PASS</name>
+                <value>root</value>
+            </vars>
+        </environment>
+    </svc>
+</stack>

@@ -1,0 +1,13 @@
+version: '2'
+services:
+  nginx-1:
+    image: nginx-1
+    environment:
+      ENV: prod
+      USER: admin
+
+  nginx:
+    image: nginx
+    environment:
+      ENV: test
+      USER: root
